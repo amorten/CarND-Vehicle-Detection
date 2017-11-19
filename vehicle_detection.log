@@ -1,0 +1,19 @@
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 32 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [None, None]
+Data set length: 9866
+Feature vector length: 8460
+9.84 seconds to train SVC.
+Test Accuracy of SVC =  0.9985
+------------------------------------------------
