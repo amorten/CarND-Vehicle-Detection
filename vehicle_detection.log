@@ -17,3 +17,291 @@ Feature vector length: 8460
 9.84 seconds to train SVC.
 Test Accuracy of SVC =  0.9985
 ------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 64 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [None, None]
+Data set length: 9866
+Feature vector length: 8556
+11.05 seconds to train SVC.
+Test Accuracy of SVC =  0.998
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [None, None]
+Data set length: 9866
+Feature vector length: 8412
+7.08 seconds to train SVC.
+Test Accuracy of SVC =  0.9985
+------------------------------------------------
+
+The above training was used to analyze the full project video.
+The output was saved as test_output_v1.mp4
+
+
+
+
+
+
+
+AT THIS POINT I CHANGED THE TRAINING AND TEST DATA SETS
+SO THAT THE TEST DATA IS INDPENDENT (DIFFERENT CARS) FROM
+THE TRAINING DATA.
+
+
+
+
+
+
+
+------------------------------------------------
+Using: 
+color_space: RGB 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: 0 
+spatial_size: (16, 16) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [None, None]
+Data set length: 9866
+Feature vector length: 2580
+9.72 seconds to train SVC.
+Test Accuracy of SVC =  0.9685
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [None, None]
+Data set length: 9866
+Feature vector length: 8412
+6.81 seconds to train SVC.
+Test Accuracy of SVC =  0.9883
+------------------------------------------------
+
+262.05 seconds to to do grid training.
+
+Arg! The above grid search only did one parameter combo, which was
+linear with C=1, which should have been the same as above...
+
+... but was 40 TIME SLOWER!
+
+Therefore, I should just use LinearSVC and manually try different C.
+
+
+
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [400, 656]
+Data set length: 9866
+Feature vector length: 8412
+24.52 seconds to train SVC.
+Test Accuracy of SVC =  0.9883
+C = 0.1
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [400, 656]
+Data set length: 9866
+Feature vector length: 8412
+5.47 seconds to train SVC.
+Test Accuracy of SVC =  0.9879
+C = 0.001
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [400, 656]
+Data set length: 9866
+Feature vector length: 8412
+4.84 seconds to train SVC.
+Test Accuracy of SVC =  0.9817
+C = 1e-05
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [400, 656]
+Data set length: 9866
+Feature vector length: 8412
+5.06 seconds to train SVC.
+Test Accuracy of SVC =  0.9883
+C = 10
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [400, 656]
+Data set length: 9866
+Feature vector length: 8412
+4.91 seconds to train SVC.
+Test Accuracy of SVC =  0.9883
+C = 100
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [400, 656]
+Data set length: 9866
+Feature vector length: 8412
+4.6 seconds to train SVC.
+Test Accuracy of SVC =  0.9883
+C = 1000
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [400, 656]
+Data set length: 9866
+Feature vector length: 8412
+4.9 seconds to train SVC.
+Test Accuracy of SVC =  0.9883
+C = 10000
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [400, 656]
+Data set length: 9866
+Feature vector length: 8412
+6.13 seconds to train SVC.
+Test Accuracy of SVC =  0.9883
+C = 1
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [400, 656]
+Data set length: 9866
+Feature vector length: 8412
+5.18 seconds to train SVC.
+Test Accuracy of SVC =  0.9883
+C = 1
+class_weight = 'balanced'
+------------------------------------------------
