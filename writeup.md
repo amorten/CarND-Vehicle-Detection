@@ -57,21 +57,6 @@ In cell #9  of the [notebook] I split the new dataset into training and validati
 
 In cells #11-24 I define helper functions for cells #25 and beyond. These helper functions are slightly modified version of the functions defined in the course. I will explain the some of the helper functions below as needed.
 
-Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
-
-# TODO IMAGE
-![alt text][image1]
-
-
-
-
-
-
-
-
-
-
-
 
 
 ### Histogram of Oriented Gradients (HOG)
@@ -88,17 +73,16 @@ The function `single_img_featuers()` is just one example of a helper function th
 
 Continuing with the discussion of cell #25, the example feature extraction performed in cell #25 uses the first channel of the RGB colorspace, 9 HOG orientations, 8 pixels per cell, 2 cells_per_block, a spatial feature size of 16x16, and 16 histogram bins. 
 
-While I will later choose to use all three channels of the `YCrCb` colorspace, here I just try `RGB` as an example. I ultimately chose the `YCrCb` color space because it gave the highest validation accuracy (or tied for highest).
+While I will later choose to use all three channels of the `HSV` colorspace, here I just try `RGB` as an example. I ultimately chose the `HSV` color space because it gave the highest validation accuracy. On the raw data set, `YCrCb` was slightly better, but after altered the data set as described earlier, `HSV` better accuracy (and was able to detect the white car, unlike `YCrCb`). 
 I chose 9 orientations because several papers recommend that as a rough upper limit for the number of orientations.  I selected `pixels_per_cell = 8` by trying different cell sizes and seeing which captured the most useful features of cars vs noncars. The value of `cells_per_block` was set to 2 so that there would be at least some normalization.  I tried various spatial feature sizes, selecting the smallest that did not significantly reduce the validation accuracy (calculated later). The number of histogram bins was chosen similarly.
 
 Here is an example of HOG features calculated with the above parameters on a random car and noncar image:
 
 ![image of HOG features of car and noncar][single_img_features]
 
-In cell #27 of the [notebook] I extract features from the training and test data. Instead of using `single_img_features()` I use `extract_features()` defined in cell #15. Extract features calculates the three types of features for a list of images rather than a single image. It outputs an array of features arrays (one feature array per image). By feeding in a list of training images and then a list of validation images, the resulting outputs can be used for training a classifier. Note that here I use the `YCrCb` color channel with all three channels. This channel was chosen because it gave the best validation accuracy.
+In cell #27 of the [notebook] I extract features from the training and test data. Instead of using `single_img_features()` I use `extract_features()` defined in cell #15. Extract features calculates the three types of features for a list of images rather than a single image. It outputs an array of features arrays (one feature array per image). By feeding in a list of training images and then a list of validation images, the resulting outputs can be used for training a classifier. Note that here I use the `HSV` color channel with all three channels. This channel was chosen because it gave the best validation accuracy.
 
 
-![alt text][image2]
 
 #### 2. Explain how you settled on your final choice of HOG parameters.
 
@@ -196,5 +180,22 @@ There are fewer false positives:
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+At first I trained the linear SVM using the YCrCb colorspace. I got many false positives despite a very high validation accuracy.  I was concerned about overfitting, so I manually split the training and validation data sets so that the same car did not appear in both sets (each car appeared in approximately 10 consecutive images in the original data set). Retraining the model resulted in lower validation error, but very few false positives. Unfortuneatly, the white car could not be detected.
+
+So I added images from the Udacity data set. With the new images, validation accuracy dropped significantly, but the what car was detected. Unfortuneatly, this came with many false positives a well. 
+So I took the false positives and added them back to the training data. It did help somewhat.
+
+
+I think the problem with the Udacity data is that the car images are quite dark and the vast majority look quite different from the cars in our video. I converted all of the Udacity car bounding boxes to squares using cropping. Perhaps that removed too much of the car-like features from some of the photos.
+
+
+Then I went back and tried HSV color space.  YCrCb and HSV had given me similar validation accuracies on the original data set, but I now noticed that on the newly split train/validation data the HSV color space gave higher validation accuracy.  I was excited, but then found that it too produced many false positives.
+
+
+My pipeline could fail badly in any other kinds of driving conditions.  I looked through the training images provided with the project and noticed that the background images are all quite similar to the background in the video. The sample cars also appear cleanly (without obstruction) and with similar lighting bright as in the video.  Also, my attempts to set heatmap history length and thresholds were very finetuned to the project video. The same parameters liekly won't work under different driving conditions.
+
+Because of my use of a long history, cars with speeds very different from my own will not be detected. That doesn't happen in the project video, but it does sometimes happen in reality, which is a situation that can be quite dangerous.
+
+I could make it more robust in several ways. First, I definitely need more data with cars and vehicles in different kinds of lighting. Second, I should probably try other classifiers, and perhaps combine predictions from multiple classifiers to make a final prediction (or just pick the best classifier and go with it). There may be other types of features to extract that I have yet to learn about, say, by using convolutional layers.
+
 
