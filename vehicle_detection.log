@@ -305,3 +305,124 @@ Test Accuracy of SVC =  0.9883
 C = 1
 class_weight = 'balanced'
 ------------------------------------------------
+
+
+
+
+
+
+AT THIS POINT I ADDED SOME DATA (ABOUT 6000) FROM THE UDACITY DATASET
+
+
+
+
+
+
+
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [None, None]
+Data set length: 14373
+Feature vector length: 8412
+93.81 seconds to train SVC.
+Test Accuracy of SVC =  0.9571
+C = 1
+class_weight = 'balanced'
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [400, 656]
+Data set length: 14373
+Feature vector length: 8412
+55.15 seconds to train SVC.
+Test Accuracy of SVC =  0.9571
+C = 1000
+class_weight = 'balanced'
+------------------------------------------------
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [400, 656]
+Data set length: 14373
+Feature vector length: 8412
+80.23 seconds to train SVC.
+Test Accuracy of SVC =  0.9571
+C = 0.01
+class_weight = 'balanced'
+------------------------------------------------
+
+Used grid search to train with rbf kernel
+Saved rbf_model_svr.sav and rbf_model_clf.sav
+
+3026.96 seconds to to do grid training.
+
+
+---------------------------------------------
+
+
+
+
+
+
+
+AT THIS TIME I ADDED FALSE POSITIVES BACK INTO THE TRAINING DATASET
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------
+Using: 
+color_space: YCrCb 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [None, None]
+Data set length: 14373
+Feature vector length: 8412
+86.81 seconds to train SVC.
+Test Accuracy of SVC =  0.9581
+C = 0.01
+class_weight = 'balanced'
+------------------------------------------------
