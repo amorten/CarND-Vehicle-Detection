@@ -18,7 +18,7 @@ The Files
 * The writeup is [writeup.md](./writup.md)
 * The code is an Ipython notebook named [vehicle_detection.ipynb](vehicle_detection.ipynb)
 * There is a log file called [vehicle_detection.log](vehicle_detection.log) that shows some of the hyperparameters I tried along with validation results.   
-* The final output video with detected videos is [output_video.mp4](output_video.mp4)
+* The final output video with detected videos is [video_output.mp4](video_output.mp4)
 
 
 
