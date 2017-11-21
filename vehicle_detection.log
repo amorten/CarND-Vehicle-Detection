@@ -1071,3 +1071,92 @@ class_weight = 'balanced'
 /Users/amorten/miniconda3/envs/carnd-term1/lib/python3.5/site-packages/skimage/feature/_hog.py:119: skimage_deprecation: Default value of `block_norm`==`L1` is deprecated and will be changed to `L2-Hys` in v0.15
   'be changed to `L2-Hys` in v0.15', skimage_deprecation)
 
+
+------------------------------------------------
+Using: 
+color_space: HSV 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [None, None]
+Data set length: 8792
+Feature vector length: 8412
+9.22 seconds to train SVC.
+Test Accuracy of SVC =  0.9949
+C = 1
+class_weight = 'balanced'
+------------------------------------------------
+/Users/amorten/miniconda3/envs/carnd-term1/lib/python3.5/site-packages/skimage/feature/_hog.py:119: skimage_deprecation: Default value of `block_norm`==`L1` is deprecated and will be changed to `L2-Hys` in v0.15
+  'be changed to `L2-Hys` in v0.15', skimage_deprecation)
+
+/Users/amorten/miniconda3/envs/carnd-term1/lib/python3.5/site-packages/skimage/feature/_hog.py:119: skimage_deprecation: Default value of `block_norm`==`L1` is deprecated and will be changed to `L2-Hys` in v0.15
+  'be changed to `L2-Hys` in v0.15', skimage_deprecation)
+
+
+------------------------------------------------
+Using: 
+color_space: HSV 
+orient: 9 
+pix_per_cell: 8 
+cell_per_block: 2 
+hog_channel: ALL 
+spatial_size: (32, 32) 
+hist_bins: 16 
+spatial_feat: True 
+hist_feat: True 
+hog_feat: True 
+y_start_stop: [None, None]
+Data set length: 8792
+Feature vector length: 8412
+13.31 seconds to train SVC.
+Test Accuracy of SVC =  0.9963
+C = 1
+class_weight = 'balanced'
+------------------------------------------------
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+/Users/amorten/miniconda3/envs/carnd-term1/lib/python3.5/site-packages/skimage/feature/_hog.py:119: skimage_deprecation: Default value of `block_norm`==`L1` is deprecated and will be changed to `L2-Hys` in v0.15
+  'be changed to `L2-Hys` in v0.15', skimage_deprecation)
+
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+/Users/amorten/miniconda3/envs/carnd-term1/lib/python3.5/site-packages/skimage/feature/_hog.py:119: skimage_deprecation: Default value of `block_norm`==`L1` is deprecated and will be changed to `L2-Hys` in v0.15
+  'be changed to `L2-Hys` in v0.15', skimage_deprecation)
+
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+/Users/amorten/miniconda3/envs/carnd-term1/lib/python3.5/site-packages/skimage/feature/_hog.py:119: skimage_deprecation: Default value of `block_norm`==`L1` is deprecated and will be changed to `L2-Hys` in v0.15
+  'be changed to `L2-Hys` in v0.15', skimage_deprecation)
+
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+/Users/amorten/miniconda3/envs/carnd-term1/lib/python3.5/site-packages/skimage/feature/_hog.py:119: skimage_deprecation: Default value of `block_norm`==`L1` is deprecated and will be changed to `L2-Hys` in v0.15
+  'be changed to `L2-Hys` in v0.15', skimage_deprecation)
+
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+Error closing: 'NoneType' object has no attribute 'close'
+/Users/amorten/miniconda3/envs/carnd-term1/lib/python3.5/site-packages/skimage/feature/_hog.py:119: skimage_deprecation: Default value of `block_norm`==`L1` is deprecated and will be changed to `L2-Hys` in v0.15
+  'be changed to `L2-Hys` in v0.15', skimage_deprecation)
+
+/Users/amorten/miniconda3/envs/carnd-term1/lib/python3.5/site-packages/skimage/feature/_hog.py:119: skimage_deprecation: Default value of `block_norm`==`L1` is deprecated and will be changed to `L2-Hys` in v0.15
+  'be changed to `L2-Hys` in v0.15', skimage_deprecation)
+
